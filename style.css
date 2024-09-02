@@ -51,7 +51,8 @@ form button[type="submit"] {
   transition: background-color 0.2s ease-in-out;
 }
 
-form button[type="submit"]:hover {
+form button[type="submit"]:hover,
+.recipe button:hover {
   background-color: #ff5c5c;
 }
 
@@ -80,6 +81,7 @@ form button[type="submit"]:hover {
 
 .recipe h3 {
   font-size: 24px;
+  margin-block: 5px;
 }
 
 .recipe p {
@@ -90,6 +92,32 @@ form button[type="submit"]:hover {
 
 .recipe span {
   font-weight: 600;
+}
+
+.recipe button {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 18px auto;
+  background-color: #f44336;
+  color: #fff;
+}
+
+.recipe-details {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background-color: #694c2f;
+  width: 40%;
+  height: 60%;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {
