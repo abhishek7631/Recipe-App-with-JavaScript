@@ -2,62 +2,66 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-nav {
+body {
+  background-color: #2b1d0f;
+  color: #fff;
+}
+
+header nav {
+  background-color: #212121;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* width: 700px; */
-  margin: auto;
-  background-color: rgb(59, 56, 56);
-  height: 4rem;
+  z-index: 1;
 }
 
-.logo {
-  margin-left: 2rem;
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: white;
-  font-family: sans-serif;
+header nav h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.search-bar {
-  margin-right: 5rem;
+header nav form {
+  display: flex;
+  justify-content: center;
 }
 
-.search-bar input {
-  height: 2.4rem;
-  width: 15rem;
-  padding: 7px;
-  border-radius: 5px;
-  outline: none;
+form input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+form input[type="text"],
+button[type="submit"] {
   border: none;
-}
-.search-bar ::placeholder {
-  font-size: 1.2rem;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
-.search-bar button {
-  height: 2.4rem;
-  width: 5rem;
-  border-radius: 5px;
-  padding: 7px;
-  outline: none;
-  border: none;
-  background-color: rgb(143, 27, 27);
+form button[type="submit"] {
+  background-color: #f44336;
   color: white;
   cursor: pointer;
-  margin-left: 4px;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.recipe-container {
-  background-color: rgb(96, 48, 14);
-  height: 100vh;
+form button[type="submit"]:hover {
+  background-color: #ff5c5c;
 }
 
-.recipe-container h1 {
-  text-align: center;
-  padding-top: 2rem;
-  color: white;
+@media screen and (max-width: 600px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav form {
+    width: 80%;
+    margin-top: 20px;
+  }
 }
