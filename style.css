@@ -55,6 +55,43 @@ form button[type="submit"]:hover {
   background-color: #ff5c5c;
 }
 
+.recipe-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+  width: 85%;
+  margin: 10px auto;
+  padding: 20px;
+  place-items: center;
+}
+
+.recipe {
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1),
+    -5px 5px 10px rgba(34, 34, 34, 0.5);
+  cursor: pointer;
+  max-width: 300px;
+}
+
+.recipe h3 {
+  font-size: 24px;
+}
+
+.recipe p {
+  font-size: 20px;
+  color: #4a4a4a;
+  margin: 5px 0;
+}
+
+.recipe span {
+  font-weight: 600;
+}
+
 @media screen and (max-width: 600px) {
   header nav {
     flex-direction: column;
